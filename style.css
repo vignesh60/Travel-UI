@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 
-:root{
+:root {
     --padding: 1rem 5%;
     --grey-500: #403f42;
     --btn-color: #5D50C6;
@@ -45,7 +45,8 @@ nav {
     z-index: 100;
 }
 
-nav ul,.logo-filed {
+nav ul,
+.logo-filed {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -196,7 +197,7 @@ nav .list-items li {
     position: relative;
 }
 
-.right-image-field .img-field img{
+.right-image-field .img-field img {
     width: 100%;
 }
 
@@ -214,7 +215,7 @@ nav .list-items li {
     position: absolute;
     top: 45%;
     left: 0%;
-    transform: translate(-50%,-100%);
+    transform: translate(-50%, -100%);
     z-index: 10;
 }
 
@@ -288,13 +289,13 @@ nav .list-items li {
     gap: 1rem;
 }
 
-.pink-heading{
+.pink-heading {
     color: var(--pink-color);
     font-weight: 600;
     font-size: 1.5rem;
 }
 
-.sub-heading{
+.sub-heading {
     font-size: 2.5vw;
     font-weight: 600;
 }
@@ -311,7 +312,7 @@ nav .list-items li {
     box-shadow: 0 8px 50px -25px #00000055;
 }
 
-.sec-card p{
+.sec-card p {
     font-weight: 600;
 }
 
@@ -337,7 +338,7 @@ nav .list-items li {
     padding: var(--padding);
 }
 
-.section4 .top-container{
+.section4 .top-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -352,7 +353,7 @@ nav .list-items li {
 .next-prev-btns button {
     border: 0;
     outline: 0;
-    padding: 1.2rem;
+    padding: 1.2rem 1.5rem;
     border-radius: 10rem;
     background: var(--btn-color);
     color: var(--white-color);
@@ -366,13 +367,13 @@ nav .list-items li {
 
 .section4 .bottom-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
 .bottom-container .bt-card {
     border-radius: 1rem;
-    box-shadow: 0 4px 50px -25px rgba(0,0,0,1);
+    box-shadow: 0 4px 50px -25px rgba(0, 0, 0, 1);
 }
 
 .bottom-container .bt-card img {
@@ -467,12 +468,13 @@ nav .list-items li {
     width: 2rem;
 }
 
-.gradient-color::before,.gradient-color2::before {
+.gradient-color::before,
+.gradient-color2::before {
     width: 6rem;
     height: 6rem;
     content: '';
     position: absolute;
-    background: linear-gradient(#5D50C6,#F85E9F);
+    background: linear-gradient(#5D50C6, #F85E9F);
     top: -10rem;
     border-radius: 30rem;
     filter: blur(5px);
@@ -602,7 +604,7 @@ nav .list-items li {
 }
 
 
-.section6 .section6-right-field img{
+.section6 .section6-right-field img {
     width: 60%;
 }
 
@@ -640,7 +642,7 @@ nav .list-items li {
     box-shadow: 2px 2px 20px -6px var(--black-color);
 }
 
-.section6-right-field .map img{
+.section6-right-field .map img {
     width: 1.5rem;
 }
 
@@ -649,7 +651,90 @@ nav .list-items li {
 
 
 
-@media(max-width: 1000px){
+
+
+
+
+/* =====================section7=============================== */
+
+.section7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 13rem;
+    text-align: center;
+    position: relative;
+}
+
+.section7 h1 span {
+    color: var(--rating-color);
+}
+
+.section7 .prev-next-buttons {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section7 .prev-next-buttons button {
+    padding: 1.5rem 1.8rem;
+    border: 0;
+    outline: 0;
+    border-radius: 30rem;
+    background: var(--btn-color);
+    color: var(--white-color);
+    box-shadow: 2px 2px 10px -5px var(--black-color);
+}
+
+.section7 .prev-next-buttons button:first-child {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+.section7 .btn-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.section7 .btn-list li::before {
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    position: absolute;
+    background: #00000035;
+    border-radius: 5rem;
+}
+
+.section7 .btn-list li:nth-child(2):before {
+    background: var(--pink-color);
+}
+
+.section7 .background-img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section7 .para {
+    width: 80%;
+}
+
+
+
+
+
+
+@media(max-width: 1000px) {
     .section5 {
         grid-template-columns: 1fr;
     }
@@ -657,49 +742,59 @@ nav .list-items li {
     .section5 .section5-left-field {
         width: 80%;
     }
+
     .section6-left-field .list .list-item img {
         width: 4rem;
     }
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 800px) {
     .section1 {
         grid-template-columns: 1fr;
         height: 100vh;
     }
+
     .section1 .left-side-content {
         padding: 1rem 0;
     }
+
     .section2 {
         margin-top: 20rem;
         flex-wrap: wrap;
     }
+
     .section2 .start {
         display: none;
     }
+
     .section3 {
         flex-direction: column;
         gap: 2rem;
     }
+
     .sec-card {
         width: 80%;
     }
+
     .section4 .bottom-container {
-        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 2rem;
     }
+
     .section5 .section5-right-field .paragraph {
         color: var(--grey-500);
         font-size: 1rem;
     }
-    .sub-heading{
+
+    .sub-heading {
         font-size: 2rem;
     }
+
     .four-box span p:first-child {
         font-size: 1rem;
     }
-    
+
     .four-box span p:last-child {
         font-size: 2vw;
     }
@@ -707,29 +802,45 @@ nav .list-items li {
     .section6 {
         grid-template-columns: 1fr;
     }
+
     .next-prev-btns button {
         display: none;
     }
+
+    .section6-right-field {
+        height: 100vh;
+    }
+    .section7 {
+        margin-top: 2rem;
+    }
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
     .section2 {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         margin-top: 14rem;
     }
+
     .section5-left-field .discount {
         padding: 0.4rem;
         font-size: 0.6rem;
         gap: 0.5rem;
         right: -3rem;
     }
+
     .section1 .left-side-content h1 {
         font-size: 3rem;
     }
-    .section1,.section2,.section3,.section5,.section6-left-field .paragraph, .pink-heading, .sub-heading{
+
+    .section1,
+    .section2,
+    .section3,
+    .section5,
+    .section6-left-field .paragraph,
+    .pink-heading,
+    .sub-heading {
         text-align: center;
     }
 }
-
