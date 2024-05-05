@@ -35,17 +35,49 @@ body {
 
 /* ========================nav============================= */
 
+.navbar {
+    border-bottom: 5px solid var(--white-color);
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar .tab {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--grey-500);
+    display: none;
+}
+
+.navbar .drop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: var(--padding);
+    text-align: center;
+    display: none;
+}
+
+.drop-list li {
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drop-list li:hover {
+    background: #00000018;
+}
+
 nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--padding);
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(20px);
-    z-index: 100;
-    border-bottom: 5px solid var(--white-color);
 }
 
 nav ul,
@@ -106,6 +138,7 @@ nav .list-items li {
     gap: 3rem;
     padding: var(--padding);
     height: 100vh;
+    padding-top: 7rem;
 }
 
 .section1 .left-side-content {
@@ -340,6 +373,10 @@ nav .list-items li {
     color: var(--grey-500);
 }
 
+.cost {
+    font-weight: 600;
+}
+
 
 
 
@@ -393,6 +430,9 @@ nav .list-items li {
 .bottom-container .bt-card {
     border-radius: 1rem;
     box-shadow: 0 4px 50px -25px rgba(0, 0, 0, 1);
+    transition: 2s ease;
+    transform: translateY(30%);
+    opacity: 0;
 }
 
 .bottom-container .bt-card img {
@@ -557,6 +597,35 @@ nav .list-items li {
     top: -3rem;
     right: -6rem;
     width: 12rem;
+}
+
+.section5 .orange::before{
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background: var(--rating-color);
+    position: absolute;
+    border-radius: 10rem;
+    filter: blur(3px);
+    bottom: 7rem;
+    right: 4rem;
+
+}
+
+.section5 .orange:last-child:before{
+    bottom: 16rem;
+    right: 9rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.section5 .orange2::before{
+    bottom: 17rem;
+    right: -5rem;
+    width: 3rem;
+    height: 3rem;
+    z-index: -1;
+    background: var(--yellow-color);
 }
 
 
@@ -938,9 +1007,14 @@ footer .copy-right .icons{
         display: none;
     }
 
+    .navbar .tab {
+        display: block;
+    }
+
     .section2 {
-        margin-top: 20rem;
+        padding-top: 10rem;
         flex-wrap: wrap;
+        height: 100vh;
     }
 
     .section2 .start {
