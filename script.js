@@ -1,0 +1,1 @@
+$(".girl-image").css({transform: "translateX(0%)"});

@@ -23,6 +23,7 @@
 
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -44,6 +45,7 @@ nav {
     top: 0;
     backdrop-filter: blur(20px);
     z-index: 100;
+    border-bottom: 5px solid var(--white-color);
 }
 
 nav ul,
@@ -110,7 +112,7 @@ nav .list-items li {
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .section1 .explore {
@@ -425,6 +427,8 @@ nav .list-items li {
 .section5 .section5-left-field .girl-image {
     width: 100%;
     z-index: -1;
+    transition: 2s ease;
+    transform: translateX(-200%);
 }
 
 .section5 .section5-left-field {
@@ -767,7 +771,7 @@ nav .list-items li {
     position: relative;
 }
 
-.section8 img {
+.section8 .top-star {
     position: absolute;
     top: -3rem;
     left: -3rem;
@@ -813,6 +817,77 @@ nav .list-items li {
     color: #00000093;
 }
 
+.side-star {
+    bottom: -20rem;
+    right: 0;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+/* ========================footer=================================== */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 8rem;
+    padding: var(--padding);
+    border-top: 1px solid #00000018;
+}
+
+footer .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 2rem;
+}
+
+footer .row .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.row .col p:first-child {
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.col p {
+    color: var(--grey-500);
+}
+
+footer .copy-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .copy-right .icons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.copy-right .icons i {
+    background: var(--btn-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4rem;
+}
+
+.copy-right .icons i:first-child {
+    padding: 0.5rem 0.7rem;
+}
+
 
 
 
@@ -829,6 +904,9 @@ nav .list-items li {
 
     .section6-left-field .list .list-item img {
         width: 4rem;
+    }
+    nav .list-items {
+        display: none;
     }
 }
 
@@ -906,14 +984,21 @@ nav .list-items li {
     .section8 {
         margin-top: 10rem;
     }
+    footer .row {
+        text-align: center; 
+    }
 }
 
-@media(max-width:500px) {
+@media(max-width:600px) {
     .section2 {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         margin-top: 14rem;
+    }
+
+    .left-side-content {
+        align-items: center;
     }
 
     .section5-left-field .discount {
@@ -939,6 +1024,10 @@ nav .list-items li {
 
     .section8 .inner-section {
         padding: 1rem;
+    }
+
+    .sub-heading {
+        font-size: 1.5rem !important;
     }
 
     .section8 .email-with-button {
