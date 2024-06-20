@@ -32,7 +32,7 @@ $(document).ready(function () {
     var windowHeight = $(window).height();
     var elementHeight = rect.top;
     var offset = windowHeight / 1 - elementHeight / 1;
-    return rect.top <= offset && rect.bottom >= offset;
+    return rect.top <= offset;
   }
 
   // Function to trigger animations when a section is centered in the viewport
