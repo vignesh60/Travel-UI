@@ -37,12 +37,12 @@ body {
 
 .navbar {
     border-bottom: 5px solid var(--white-color);
-    position: absolute;
-    top: 0;
+    position: sticky;
     backdrop-filter: blur(20px);
     z-index: 100;
     width: 100%;
-    position: fixed;
+    top: 0;
+    
 }
 
 .navbar .tab {
@@ -143,7 +143,7 @@ nav .list-items li {
     gap: 3rem;
     padding: var(--padding);
     height: 100vh;
-    padding-top: 7rem;
+
 }
 
 .section1 .left-side-content {

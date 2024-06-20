@@ -31,7 +31,7 @@ $(document).ready(function () {
     var rect = element[0].getBoundingClientRect();
     var windowHeight = $(window).height();
     var elementHeight = rect.top;
-    var offset = windowHeight / 2 - elementHeight / 2;
+    var offset = windowHeight / 1 - elementHeight / 1;
     return rect.top <= offset && rect.bottom >= offset;
   }
 
